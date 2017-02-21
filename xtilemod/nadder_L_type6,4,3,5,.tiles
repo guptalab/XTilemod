@@ -1,0 +1,68 @@
+% nadder_L_type6,4,3,5,.tiles
+% Mentor : Manish Gupta
+% Author : Sandeep Vasani, Abhishek Chhajer, Jaley Dholakiya
+% Addition tile set of 6, 4, 3, 5, 
+% topmost row shows the output
+
+%Seed Tile	:	Green
+%Output Tile:	Red = 1	White = 0
+%Input  Tile:	Brown=1	yellow=0
+% grey colour in the input represent frame tile.
+
+
+% 4 : 100
+% 3 : 11
+% 5 : 101
+%----->>>Final Sum = 18	in binary : 10010
+
+
+tile edges matches {{N E S W}*}
+num tile types=31
+num binding types=15
+
+tile edges={
+% ----------seed tile------------
+{ 7 0 0 7 }(green)
+% ----------basic computational tiles------------
+{ 1 4 2 2 }(white)
+{ 2 4 1 1 }(red)
+{ 1 1 1 1 }(white)
+{ 2 1 2 1 }(red)
+{ 1 2 2 2 }(white)
+{ 2 2 1 1 }(red)
+% ----------other computational tiles------------
+{ 1 5 1 4 }(white)
+{ 1 6 1 5 }(white)
+{ 2 5 2 4 }(red)
+{ 2 6 2 5 }(red)
+% ----------left and topmost frame tiles------------
+{3 1 3 0 }(grey)
+{ 0 3 3 0 }(grey)
+{ 0 3 2 3 }(red)
+{ 0 3 1 3}(white)
+% ----------vertical frame tiles------------
+{ 8 0 7 1 }(yellow)
+{ 9 0 8 1 }(yellow)
+{ 10 0 9 6 }(brown)
+{ 11 0 10 4 }(brown)
+{ 12 0 11 5 }(brown)
+{ 13 0 12 4 }(brown)
+{ 14 0 13 1 }(yellow)
+{ 15 0 14 6 }(brown)
+{ 0 0 15 3 }(grey)
+% ----------horizontal frame tiles------------
+{ 1 7 0 8 }(yellow)
+{ 2 8 0 9 }(brown)
+{ 2 9 0 10 }(brown)
+{ 1 10 0 11 }(yellow)
+{ 1 11 0 12 }(yellow)
+{ 1 12 0 13 }(yellow)
+{ 3 13 0 0 }(grey)
+}
+
+
+binding strengths=
+{1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 }
+size=24
+block=12
+T=2
